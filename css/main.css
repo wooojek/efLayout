@@ -1,22 +1,135 @@
-body {
-  line-height: 1;
-}
-
-ol, ul {
-  list-style: none;
+.display {
+  display: none;
 }
 
 * {
+  font-family: 'Arial', sans-serif;
   box-sizing: border-box;
-  margin: 0;
+}
+
+* ul {
+  list-style: none;
   padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+}
+
+* a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+}
+
+.centered {
+  text-align: center;
 }
 
 .container {
+  position: relative;
+  width: 100%;
   max-width: 1200px;
-  padding: 0;
+  min-width: 320px;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .hide {
+    display: none;
+  }
+}
+
+.container .row:before, .container .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container .row [class*="col-"] {
+  float: left;
+  min-height: 2px;
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .row .col-1 {
+    width: 8.33333%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container .row .col-2 {
+    width: 16.66667%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container .row .col-3 {
+    width: 25%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container .row .col-4 {
+    width: 33.33333%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container .row .col-5 {
+    width: 41.66667%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container .row .col-6 {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container .row .col-7 {
+    width: 58.33333%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container .row .col-8 {
+    width: 66.66667%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container .row .col-9 {
+    width: 75%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container .row .col-10 {
+    width: 83.33333%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container .row .col-11 {
+    width: 91.66667%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container .row .col-12 {
+    width: 100%;
+  }
+}
+
+.container .clearfix:before, .container .clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media only screen and (min-width: 768px) {
+  .container .hide {
+    display: none;
+  }
 }

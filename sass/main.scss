@@ -1,22 +1,87 @@
-//style reset
-body {
-	line-height: 1;
+$mainColor: #13bbd2; 
+
+.display {
+    display: none;
 }
-ol, ul {
-	list-style: none;
+
+$column: 12;
+$site-width: 1200px;
+$min-site-width: 320px;
+$tablet-breakpoint: 768px;
+$tablet-up: "only screen and (min-width: 768px)";
+$tablet-down: "only screen and (max-width: 768px)";
+
+@mixin clear {
+
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
 }
 
 * {
+    font-family: 'Arial', sans-serif;
     box-sizing: border-box;
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    a {
+        text-decoration: none;
+    }
+}
+
+body {
     margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+}
+
+.centered {
+    text-align: center;
 }
 
 .container {
-    max-width: 1200px;
-    padding: 0;
+    position: relative;
+    width: 100%;
+    max-width: $site-width;
+    min-width: $min-site-width;
+    margin: 0 auto;
+
+    .hide {
+        @media #{$tablet-up} {
+            display: none;
+        }
+    }
+
+    .row {
+
+        @include clear();
+
+        [class*="col-"] {
+
+            float: left;
+            min-height: 2px;
+            width: 100%;
+        }
+
+        @for $i from 1 through $column {
+            .col-#{$i} {
+                @media #{$tablet-up} {
+                    width: (100%/$column)*$i;
+
+                }
+
+            }
+        }
+    }
+    .clearfix {
+        @include clear();
+    }
+
+    .hide {
+        @media #{$tablet-up} {
+            display: none;
+        }
+    }
 }

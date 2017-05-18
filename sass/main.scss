@@ -1,4 +1,5 @@
-$mainColor: #13bbd2; 
+$mainColor: #13bbd2;
+$secondColor: #d9dada; 
 
 .display {
     display: none;
@@ -43,6 +44,7 @@ body {
 
 .container {
     position: relative;
+    height: 100%;
     width: 100%;
     max-width: $site-width;
     min-width: $min-site-width;
@@ -84,4 +86,113 @@ body {
             display: none;
         }
     }
+}
+
+header {
+    width: 100vw;
+    height: 10vw;
+    background-color: $mainColor;
+    .container {
+        nav {
+            width: 100%;
+            height: 100%;
+
+            .logo {
+                height: 100%;
+                display: flex;
+                align-items: center;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    border: 2px solid #56d0df;
+                    border-radius: 10px;
+                }
+            }
+
+            .profile {
+                height: 100%;
+                display: flex;
+                align-items: center;
+
+                .avatar {
+                    img {
+                        border: 2px solid transparent;
+                        border-radius: 10px;
+                        height: 100%;
+                        width: 100%;
+                    }
+                    
+                }
+
+                .profileDetails {
+                    padding-left: 3vw;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    .profileName {
+                        height: 20%;
+                        color: white;
+                        font-size: 2vw;
+                        text-transform: capitalize;
+                    }
+
+                    .profileFunctions {
+                        height: 40%;
+                        width: 100%;
+
+                        li {
+                            height: 100%;
+                            img {
+                                height: 3vw;
+                                width: 3vw;
+                            }
+                        }
+                    }
+                }
+            }
+            .menu {
+                height: 100%;
+                ul {
+                    height: 100%;
+                    margin: 0;
+                    li {
+                        height: 100%;
+                        a {
+                            width: 100%;
+                            height: 100%;
+                            font-size: 1.1vw;
+                            color: white;
+                            text-transform: uppercase;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            flex-wrap: wrap;
+                            img {
+                                height: 4vw;
+                                width: 4vw;
+                                margin-bottom: 10px;
+                            }
+                        }
+                        a:active {
+                            color: black;
+                        }
+                    }
+                    li:hover {
+                        background-color: black;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+main {
+    width: 100vw;
+    height: 90vh;
+    background-color: $secondColor;
 }

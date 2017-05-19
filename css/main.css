@@ -450,7 +450,39 @@ main .container .others .products > div div p {
 
 main .container .others .history {
   width: 48%;
-  height: 7vw;
   margin-left: 2%;
+}
+
+main .container .others .history h3 {
+  font-weight: 100;
+  font-size: 1em;
+  width: 100%;
+}
+
+main .container .others .history > ul {
   background-color: white;
+  border-radius: 3px;
+  height: 22.8vw;
+  overflow: auto;
+}
+
+main .container .others .history > ul .transaction {
+  padding-left: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .container .others .history > ul .transaction div {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: wrap;
+}
+
+main .container .others .history > ul li:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #d9dada;
 }

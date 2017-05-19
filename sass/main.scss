@@ -89,6 +89,14 @@ body {
     }
 }
 
+.capitalize {
+    text-transform: capitalize;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
 header {
     width: 100vw;
     height: 10vw;
@@ -194,7 +202,7 @@ header {
                 height: 100%;
                 display: flex;
                 flex-direction: row;
-                justify-content: center;
+                justify-content: flex-end;
                 align-items: center;
                 .searchBar {
                     img {
@@ -236,6 +244,171 @@ header {
 
 main {
     width: 100vw;
-    height: 90vh;
     background-color: $secondColor;
+
+    .container {
+        padding: 30px 0;
+        width: 100%;
+        
+        .finance {
+
+            h2 {
+                margin: 0;
+                font-weight: 400;
+                font-size: 3vw;                
+            }
+
+            .addRecord {
+                display: flex;
+                justify-content: flex-end;
+
+                span {
+                    line-height: 40px;
+                }
+
+                button {
+                    line-height: 40px;
+                    background: none;
+                    border: none;
+                    background-color: $mainColor;
+                    border-radius: 3px;
+                    color: white;
+                    text-transform: uppercase;
+                    height: 40px;
+                    width: 100px;
+                    margin-left: 15px;
+                    outline: none;
+                }
+            }
+
+            .status {
+                display: flex;
+                justify-content: flex-start;
+                flex-flow: wrap;
+
+                .statusInfo {
+                    padding-right: 120px;
+
+                    h3 {
+                        font-weight: 400;                   
+                    }
+
+                    p {
+                        font-size: 1.25em;
+                        font-weight: 900;
+                    }
+                }
+
+                .accountAnalysis {
+                    margin-left: auto;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    p {
+                        padding-right: 15px;
+                    }
+
+                    div {
+                        border-radius: 3px;
+                        background-color: white;
+                        height: 30px;
+                        width: 70px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        button {
+                            padding: 0;
+                            line-height: 24px;
+                            background: none;
+                            border: none;
+                            border-radius: 3px;
+                            text-transform: uppercase;
+                            height: 24px;
+                            width: 33px;
+                            outline: none;
+                        }
+
+                        button[name="analysisOff"] {
+                            background-color: white;
+                            text-align: center;
+                        }
+                        button[name="analysisOn"] {
+                            background-color: #01cc01;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+
+            
+        }
+
+        .finance > div {
+            display: flex;
+            align-items: center;
+        }
+
+        .chart {
+            width: 100%;
+            height: 350px;
+            border-radius: 5px;
+            background-color: white;
+            margin-bottom: 10px;
+        }
+
+        .others {
+
+            h3 {
+                font-weight: 100;
+                font-size: 1em;
+                width: 100%;
+            }
+            .products {
+                display: flex;
+                flex-flow: wrap;
+                justify-content: flex-start;
+                align-items: center;
+            }
+
+            .products > div {
+                    width: 48%;
+                    height: 7vw;
+                    background-color: white;
+                    border-radius: 3px;
+                    padding: 5px 5px;
+                    margin-right: 2%;
+                    margin-bottom: 2%;
+                    display: flex;
+                    flex-flow: wrap;
+                    justify-content: flex-start;
+                    align-items: center;
+
+                    img {
+                        height: 5vw;
+                        width: 5vw;
+                    }
+
+                    div {
+                        display: flex;
+                        align-items: center;
+                        flex-flow: wrap;
+                        padding-left: 5px; 
+
+                        p {
+                            width: 100%;
+                            margin: 0;
+                        }
+                    }
+            }
+
+            .history {
+                width: 48%;
+                height: 7vw;
+                margin-left: 2%;
+                background-color: white;
+            }
+        }
+    }
 }

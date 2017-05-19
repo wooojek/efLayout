@@ -135,6 +135,14 @@ body {
   }
 }
 
+.capitalize {
+  text-transform: capitalize;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
 header {
   width: 100vw;
   height: 10vw;
@@ -245,7 +253,7 @@ header .container nav .searchLogout {
   height: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -284,6 +292,165 @@ header .container nav .searchLogout .logout a:before {
 
 main {
   width: 100vw;
-  height: 90vh;
   background-color: #d9dada;
+}
+
+main .container {
+  padding: 30px 0;
+  width: 100%;
+}
+
+main .container .finance h2 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 3vw;
+}
+
+main .container .finance .addRecord {
+  display: flex;
+  justify-content: flex-end;
+}
+
+main .container .finance .addRecord span {
+  line-height: 40px;
+}
+
+main .container .finance .addRecord button {
+  line-height: 40px;
+  background: none;
+  border: none;
+  background-color: #13bbd2;
+  border-radius: 3px;
+  color: white;
+  text-transform: uppercase;
+  height: 40px;
+  width: 100px;
+  margin-left: 15px;
+  outline: none;
+}
+
+main .container .finance .status {
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: wrap;
+}
+
+main .container .finance .status .statusInfo {
+  padding-right: 120px;
+}
+
+main .container .finance .status .statusInfo h3 {
+  font-weight: 400;
+}
+
+main .container .finance .status .statusInfo p {
+  font-size: 1.25em;
+  font-weight: 900;
+}
+
+main .container .finance .status .accountAnalysis {
+  margin-left: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .container .finance .status .accountAnalysis p {
+  padding-right: 15px;
+}
+
+main .container .finance .status .accountAnalysis div {
+  border-radius: 3px;
+  background-color: white;
+  height: 30px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .container .finance .status .accountAnalysis div button {
+  padding: 0;
+  line-height: 24px;
+  background: none;
+  border: none;
+  border-radius: 3px;
+  text-transform: uppercase;
+  height: 24px;
+  width: 33px;
+  outline: none;
+}
+
+main .container .finance .status .accountAnalysis div button[name="analysisOff"] {
+  background-color: white;
+  text-align: center;
+}
+
+main .container .finance .status .accountAnalysis div button[name="analysisOn"] {
+  background-color: #01cc01;
+  text-align: center;
+}
+
+main .container .finance > div {
+  display: flex;
+  align-items: center;
+}
+
+main .container .chart {
+  width: 100%;
+  height: 350px;
+  border-radius: 5px;
+  background-color: white;
+  margin-bottom: 10px;
+}
+
+main .container .others h3 {
+  font-weight: 100;
+  font-size: 1em;
+  width: 100%;
+}
+
+main .container .others .products {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+main .container .others .products > div {
+  width: 48%;
+  height: 7vw;
+  background-color: white;
+  border-radius: 3px;
+  padding: 5px 5px;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+main .container .others .products > div img {
+  height: 5vw;
+  width: 5vw;
+}
+
+main .container .others .products > div div {
+  display: flex;
+  align-items: center;
+  flex-flow: wrap;
+  padding-left: 5px;
+}
+
+main .container .others .products > div div p {
+  width: 100%;
+  margin: 0;
+}
+
+main .container .others .history {
+  width: 48%;
+  height: 7vw;
+  margin-left: 2%;
+  background-color: white;
 }

@@ -99,9 +99,21 @@ body {
 
 .notification {
     position: absolute;
-    right: 0;
+    right: 25%;
     top: 0;
-    z-index: 20;
+    display: block;
+    font-size: 15px;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    z-index: 10;
+    background-color: #e81c7b;
+    color: white;
+    border-radius: 50%;
+
+    @media #{$tablet-down} {
+        right: 0;
+    }
 }
 
 header {
@@ -198,6 +210,10 @@ header {
 
                         li {
                             height: 100%;
+                            a {
+                                position: relative;
+                                display: block;
+                            }
                             img {
                                 height: 3vw;
                                 width: 3vw;
@@ -353,9 +369,13 @@ main {
                     color: white;
                     text-transform: uppercase;
                     height: 40px;
-                    width: 100px;
+                    width: 100%;
                     margin-left: 15px;
                     outline: none;
+
+                    span {
+                        width: 100px;
+                    }
                 }
 
                 button:hover {

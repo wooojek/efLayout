@@ -109,9 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
     notification.innerHTML = "2";
     notification.classList.add("notification");
 
-    messagesNotification.appendChild(notification);
-
-    console.log(messagesNotification);
+    messagesNotification.parentElement.appendChild(notification);
 });
 
 /***/ })

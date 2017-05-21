@@ -34,5 +34,5 @@ document.addEventListener("DOMContentLoaded", function (){
     notification.innerHTML = "2";
     notification.classList.add("notification");
 
-    messagesNotification.appendChild(notification);
+    messagesNotification.parentElement.appendChild(notification);
 });

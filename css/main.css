@@ -139,9 +139,23 @@ body {
 
 .notification {
   position: absolute;
-  right: 0;
+  right: 25%;
   top: 0;
-  z-index: 20;
+  display: block;
+  font-size: 15px;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  z-index: 10;
+  background-color: #e81c7b;
+  color: white;
+  border-radius: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+  .notification {
+    right: 0;
+  }
 }
 
 header {
@@ -258,6 +272,11 @@ header .container nav .profile .profileDetails .profileFunctions {
 
 header .container nav .profile .profileDetails .profileFunctions li {
   height: 100%;
+}
+
+header .container nav .profile .profileDetails .profileFunctions li a {
+  position: relative;
+  display: block;
 }
 
 header .container nav .profile .profileDetails .profileFunctions li img {
@@ -443,7 +462,7 @@ main .container .finance .addRecord button {
   color: white;
   text-transform: uppercase;
   height: 40px;
-  width: 100px;
+  width: 100%;
   margin-left: 15px;
   outline: none;
 }
@@ -452,6 +471,10 @@ main .container .finance .addRecord button {
   main .container .finance .addRecord button {
     display: none;
   }
+}
+
+main .container .finance .addRecord button span {
+  width: 100px;
 }
 
 main .container .finance .addRecord button:hover {

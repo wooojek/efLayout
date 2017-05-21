@@ -467,6 +467,7 @@ main .container .others .products > div div {
   flex-flow: wrap;
   padding-left: 5px;
   width: 50%;
+  font-size: 1.35vw;
 }
 
 main .container .others .products > div div p {

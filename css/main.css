@@ -29,12 +29,6 @@ body {
   margin: 0 auto;
 }
 
-@media only screen and (min-width: 768px) {
-  .container .hide {
-    display: none;
-  }
-}
-
 .container .row:before, .container .row:after {
   content: "";
   display: table;
@@ -161,6 +155,13 @@ header .container nav {
   height: 100%;
 }
 
+@media only screen and (max-width: 768px) {
+  header .container nav {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 header .container nav .logo {
   height: 100%;
   display: flex;
@@ -174,10 +175,24 @@ header .container nav .logo img {
   border-radius: 10px;
 }
 
+@media only screen and (max-width: 768px) {
+  header .container nav .logo img {
+    height: 9vw;
+    width: 9vw;
+    display: flex;
+  }
+}
+
 header .container nav .profile {
   height: 100%;
   display: flex;
   align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+  header .container nav .profile .avatar {
+    display: none;
+  }
 }
 
 header .container nav .profile .avatar img {
@@ -195,6 +210,14 @@ header .container nav .profile .profileDetails {
   justify-content: center;
 }
 
+@media only screen and (max-width: 768px) {
+  header .container nav .profile .profileDetails {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+  }
+}
+
 header .container nav .profile .profileDetails .profileName {
   height: 20%;
   color: white;
@@ -202,9 +225,35 @@ header .container nav .profile .profileDetails .profileName {
   text-transform: capitalize;
 }
 
+@media only screen and (max-width: 768px) {
+  header .container nav .profile .profileDetails .profileName {
+    height: 100%;
+    width: 100%;
+    font-size: 4vw;
+  }
+}
+
 header .container nav .profile .profileDetails .profileFunctions {
   height: 40%;
   width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  header .container nav .profile .profileDetails .profileFunctions {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  header .container nav .profile .profileDetails .profileFunctions ul {
+    padding-left: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
 }
 
 header .container nav .profile .profileDetails .profileFunctions li {
@@ -216,8 +265,21 @@ header .container nav .profile .profileDetails .profileFunctions li img {
   width: 3vw;
 }
 
+@media only screen and (max-width: 768px) {
+  header .container nav .profile .profileDetails .profileFunctions li img {
+    height: 6vw;
+    width: 6vw;
+  }
+}
+
 header .container nav .menu {
   height: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  header .container nav .menu {
+    display: none;
+  }
 }
 
 header .container nav .menu ul {
@@ -275,6 +337,13 @@ header .container nav .searchLogout .searchBar img {
   cursor: pointer;
 }
 
+@media only screen and (max-width: 768px) {
+  header .container nav .searchLogout .searchBar img {
+    height: 8vw;
+    width: 8vw;
+  }
+}
+
 header .container nav .searchLogout .searchBar input[type=text] {
   display: none;
   height: 30px;
@@ -285,11 +354,24 @@ header .container nav .searchLogout .searchBar input[type=text] {
   border-radius: 3px;
 }
 
+@media only screen and (max-width: 768px) {
+  header .container nav .searchLogout .searchBar input[type=text] {
+    width: 100%;
+  }
+}
+
 header .container nav .searchLogout .logout img {
   position: relative;
   top: -2px;
   height: 4vw;
   width: 4vw;
+}
+
+@media only screen and (max-width: 768px) {
+  header .container nav .searchLogout .logout img {
+    height: 8vw;
+    width: 8vw;
+  }
 }
 
 header .container nav .searchLogout .logout a {
@@ -308,6 +390,7 @@ header .container nav .searchLogout .logout a:before {
 
 main {
   width: 100vw;
+  height: 100%;
   background-color: #d9dada;
 }
 
@@ -322,14 +405,32 @@ main .container .finance h2 {
   font-size: 3vw;
 }
 
+@media only screen and (max-width: 768px) {
+  main .container .finance h2 {
+    font-size: 6vw;
+  }
+}
+
 main .container .finance .addRecord {
   display: flex;
   justify-content: flex-end;
 }
 
+@media only screen and (max-width: 768px) {
+  main .container .finance .addRecord {
+    display: none;
+  }
+}
+
 main .container .finance .addRecord span {
   line-height: 40px;
   font-size: 1.15vw;
+}
+
+@media only screen and (max-width: 768px) {
+  main .container .finance .addRecord span {
+    display: none;
+  }
 }
 
 main .container .finance .addRecord button {
@@ -345,6 +446,12 @@ main .container .finance .addRecord button {
   width: 100px;
   margin-left: 15px;
   outline: none;
+}
+
+@media only screen and (max-width: 768px) {
+  main .container .finance .addRecord button {
+    display: none;
+  }
 }
 
 main .container .finance .addRecord button:hover {
@@ -368,9 +475,21 @@ main .container .finance .status .statusInfo h3 {
   font-size: 1.7vw;
 }
 
+@media only screen and (max-width: 768px) {
+  main .container .finance .status .statusInfo h3 {
+    font-size: 4vw;
+  }
+}
+
 main .container .finance .status .statusInfo p {
   font-size: 1.5vw;
   font-weight: 900;
+}
+
+@media only screen and (max-width: 768px) {
+  main .container .finance .status .statusInfo p {
+    font-size: 3vw;
+  }
 }
 
 main .container .finance .status .accountAnalysis {
@@ -378,6 +497,12 @@ main .container .finance .status .accountAnalysis {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+  main .container .finance .status .accountAnalysis {
+    display: none;
+  }
 }
 
 main .container .finance .status .accountAnalysis p {
@@ -421,12 +546,24 @@ main .container .finance > div {
   align-items: center;
 }
 
-main .container .chart {
+main .container .finance > div .chart {
   width: 100%;
   height: 350px;
   border-radius: 5px;
   background-color: white;
   margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  main .container .finance > div .chart {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  main .container .chart img {
+    display: none;
+  }
 }
 
 main .container .others h3 {
@@ -435,11 +572,18 @@ main .container .others h3 {
   width: 100%;
 }
 
+@media only screen and (max-width: 768px) {
+  main .container .others h3 {
+    font-size: 3vw;
+  }
+}
+
 main .container .others .products {
   display: flex;
   flex-flow: wrap;
   justify-content: flex-start;
   align-items: center;
+  padding-left: 1%;
 }
 
 main .container .others .products > div {
@@ -470,6 +614,12 @@ main .container .others .products > div div {
   font-size: 1.35vw;
 }
 
+@media only screen and (max-width: 768px) {
+  main .container .others .products > div div {
+    font-size: 2vw;
+  }
+}
+
 main .container .others .products > div div p {
   width: 100%;
   margin: 0;
@@ -482,13 +632,25 @@ main .container .others .products > div:hover {
 
 main .container .others .history {
   width: 48%;
-  margin-left: 2%;
+  margin: 0 1%;
+}
+
+@media only screen and (max-width: 768px) {
+  main .container .others .history {
+    width: 96%;
+  }
 }
 
 main .container .others .history h3 {
   font-weight: 100;
   font-size: 1.25vw;
   width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  main .container .others .history h3 {
+    font-size: 3vw;
+  }
 }
 
 main .container .others .history select {
@@ -532,6 +694,10 @@ main .container .others .history > ul .transaction div {
   display: flex;
   justify-content: space-between;
   flex-flow: wrap;
+}
+
+main .container .others .history > ul .transaction .amount {
+  padding-right: 10px;
 }
 
 main .container .others .history > ul li:after {

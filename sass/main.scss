@@ -19,6 +19,12 @@ $tablet-down: "only screen and (max-width: 768px)";
     }
 }
 
+@mixin hideForMobile {
+    @media #{$tablet-down} {
+            display: none;
+        }
+}
+
 * {
     font-family: 'Arial', sans-serif;
     box-sizing: border-box;
@@ -46,12 +52,6 @@ body {
     max-width: $site-width;
     min-width: $min-site-width;
     margin: 0 auto;
-
-    .hide {
-        @media #{$tablet-up} {
-            display: none;
-        }
-    }
 
     .row {
 
@@ -112,13 +112,23 @@ header {
         nav {
             width: 100%;
             height: 100%;
+            @media #{$tablet-down} {
+                display: flex;
+                justify-content: space-between;
+            }
 
             .logo {
+
                 height: 100%;
                 display: flex;
                 align-items: center;
 
                 img {
+                    @media #{$tablet-down} {
+                        height: 9vw;
+                        width: 9vw;
+                        display: flex;
+                    }
                     height: 100%;
                     width: 100%;
                     border: 2px solid $navBarBorders;
@@ -127,11 +137,13 @@ header {
             }
 
             .profile {
+
                 height: 100%;
                 display: flex;
                 align-items: center;
 
                 .avatar {
+                    @include hideForMobile();
                     img {
                         border: 2px solid transparent;
                         border-radius: 10px;
@@ -147,23 +159,53 @@ header {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
+                    @media #{$tablet-down} {
+                        display: flex;
+                        flex-direction: row;
+                        padding: 0;
+                    }
 
                     .profileName {
                         height: 20%;
                         color: white;
                         font-size: 2vw;
                         text-transform: capitalize;
+                        @media #{$tablet-down} {
+                            height: 100%;
+                            width: 100%;
+                            font-size: 4vw;
+                        }
                     }
 
                     .profileFunctions {
                         height: 40%;
                         width: 100%;
+                        @media #{$tablet-down} {
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+                        }
+
+                        @media #{$tablet-down} {
+                            ul {
+                                padding-left: 20px; 
+                                width: 100%;
+                                display: flex;
+                                justify-content: space-around;
+                                align-items: center;
+                            }
+                        }
 
                         li {
                             height: 100%;
                             img {
                                 height: 3vw;
                                 width: 3vw;
+
+                                @media #{$tablet-down} {
+                                    height: 6vw;
+                                    width: 6vw;
+                                }
                             }
                         }
                     }
@@ -171,6 +213,8 @@ header {
             }
 
             .menu {
+                @include hideForMobile();
+
                 height: 100%;
                 ul {
                     height: 100%;
@@ -219,6 +263,10 @@ header {
                         height: 4vw;
                         width: 4vw;
                         cursor: pointer;
+                        @media #{$tablet-down} {
+                            height: 8vw;
+                            width: 8vw;
+                        }
                     }
                     input[type=text] {
                         display: none;
@@ -228,6 +276,9 @@ header {
                         padding: 5px;
                         border: none;
                         border-radius: 3px;
+                        @media #{$tablet-down} {
+                            width: 100%;
+                        }
                     }
                 }
 
@@ -237,6 +288,10 @@ header {
                         top: -2px;
                         height: 4vw;
                         width: 4vw;
+                        @media #{$tablet-down} {
+                            height: 8vw;
+                            width: 8vw;
+                        }
                     }
                     a {
                         display: flex;
@@ -258,6 +313,7 @@ header {
 
 main {
     width: 100vw;
+    height: 100%;
     background-color: $secondColor;
 
     .container {
@@ -269,19 +325,25 @@ main {
             h2 {
                 margin: 0;
                 font-weight: 400;
-                font-size: 3vw;                
+                font-size: 3vw;
+                @media #{$tablet-down} {
+                    font-size: 6vw;
+                }                
             }
 
             .addRecord {
+                @include hideForMobile();
                 display: flex;
                 justify-content: flex-end;
 
                 span {
+                    @include hideForMobile();
                     line-height: 40px;
                     font-size: 1.15vw;
                 }
 
                 button {
+                    @include hideForMobile();
                     font-size: 1.15vw;
                     line-height: 40px;
                     background: none;
@@ -313,16 +375,24 @@ main {
 
                     h3 {
                         font-weight: 400;   
-                        font-size: 1.7vw;                
+                        font-size: 1.7vw;
+                        @media #{$tablet-down} {
+                            font-size: 4vw;
+                        }                
                     }
 
                     p {
                         font-size: 1.5vw;
                         font-weight: 900;
+                        @media #{$tablet-down} {
+                            font-size: 3vw;
+                        } 
                     }
                 }
 
                 .accountAnalysis {
+                    @include hideForMobile();
+
                     margin-left: auto;
                     display: flex;
                     justify-content: space-between;
@@ -372,14 +442,23 @@ main {
         .finance > div {
             display: flex;
             align-items: center;
+
+            .chart {
+                @include hideForMobile();
+
+                width: 100%;
+                height: 350px;
+                border-radius: 5px;
+                background-color: white;
+                margin-bottom: 10px;
+
+            }
         }
 
         .chart {
-            width: 100%;
-            height: 350px;
-            border-radius: 5px;
-            background-color: white;
-            margin-bottom: 10px;
+            img {
+                @include hideForMobile();
+            }
         }
 
         .others {
@@ -388,12 +467,17 @@ main {
                 font-weight: 100;
                 font-size: 1.25vw;
                 width: 100%;
+
+                @media #{$tablet-down} {
+                    font-size: 3vw;
+                } 
             }
             .products {
                 display: flex;
                 flex-flow: wrap;
                 justify-content: flex-start;
                 align-items: center;
+                padding-left: 1%; 
             }
 
             .products > div {
@@ -420,7 +504,10 @@ main {
                         flex-flow: wrap;
                         padding-left: 5px;
                         width: 50%;
-                        font-size: 1.35vw; 
+                        font-size: 1.35vw;
+                        @media #{$tablet-down} {
+                            font-size: 2vw;
+                        }  
 
                         p {
                             width: 100%;
@@ -436,12 +523,19 @@ main {
 
             .history {
                 width: 48%;
-                margin-left: 2%;
+
+                @media #{$tablet-down} {
+                    width: 96%;
+                }
+                margin: 0 1%;
 
                 h3 {
                     font-weight: 100;
                     font-size: 1.25vw;
                     width: 100%;
+                    @media #{$tablet-down} {
+                        font-size: 3vw;
+                    } 
                 }
 
                 select {
@@ -474,6 +568,7 @@ main {
                 height: 22.8vw;
                 overflow: auto;
 
+
                 .transaction {
                     padding-left: 10px;
                     display: flex;
@@ -484,6 +579,10 @@ main {
                         display: flex;
                         justify-content: space-between;
                         flex-flow: wrap;
+                    }
+
+                    .amount {
+                        padding-right: 10px; 
                     }
                 }
 

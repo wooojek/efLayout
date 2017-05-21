@@ -257,6 +257,11 @@ header .container nav .searchLogout {
   align-items: center;
 }
 
+header .container nav .searchLogout .searchBar {
+  display: flex;
+  align-items: center;
+}
+
 header .container nav .searchLogout .searchBar img {
   height: 4vw;
   width: 4vw;
@@ -264,9 +269,12 @@ header .container nav .searchLogout .searchBar img {
 
 header .container nav .searchLogout .searchBar input[type=text] {
   display: none;
-  width: 100px;
-  -webkit-transition: width 0.4s ease-in-out;
-  transition: width 0.4s ease-in-out;
+  height: 30px;
+  width: 150px;
+  margin-right: 10px;
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
 }
 
 header .container nav .searchLogout .logout img {
@@ -313,9 +321,11 @@ main .container .finance .addRecord {
 
 main .container .finance .addRecord span {
   line-height: 40px;
+  font-size: 1.15vw;
 }
 
 main .container .finance .addRecord button {
+  font-size: 1.15vw;
   line-height: 40px;
   background: none;
   border: none;
@@ -346,10 +356,11 @@ main .container .finance .status .statusInfo {
 
 main .container .finance .status .statusInfo h3 {
   font-weight: 400;
+  font-size: 1.7vw;
 }
 
 main .container .finance .status .statusInfo p {
-  font-size: 1.25em;
+  font-size: 1.5vw;
   font-weight: 900;
 }
 
@@ -410,7 +421,7 @@ main .container .chart {
 
 main .container .others h3 {
   font-weight: 100;
-  font-size: 1em;
+  font-size: 1.25vw;
   width: 100%;
 }
 
@@ -465,7 +476,7 @@ main .container .others .history {
 
 main .container .others .history h3 {
   font-weight: 100;
-  font-size: 1em;
+  font-size: 1.25vw;
   width: 100%;
 }
 

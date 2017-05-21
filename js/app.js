@@ -3,6 +3,9 @@ document.addEventListener("DOMContentLoaded", function (){
     const onButton = document.getElementById("onButton");
     const offButton = document.getElementById("offButton");
     const chart = document.getElementsByClassName("chart")[0];
+    const searchBar = document.getElementsByClassName("searchBar")[0];
+    const searchBarImg = searchBar.childNodes[1];
+    const searchBarInput = searchBar.childNodes[3];
 
     onButton.addEventListener("click", function (event){
         event.preventDefault();
@@ -20,5 +23,11 @@ document.addEventListener("DOMContentLoaded", function (){
         chart.style.display = "none";
     });
 
-    console.log(onButton, offButton, chart);
+    searchBarImg.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        searchBarInput.style.display === "inline-block" ? searchBarInput.style.display = "none" : searchBarInput.style.display = "inline-block";
+    })
+
+    console.log(searchBar, searchBarImg, searchBarInput);
 });

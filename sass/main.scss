@@ -205,15 +205,21 @@ header {
                 justify-content: flex-end;
                 align-items: center;
                 .searchBar {
+                    display: flex;
+                    align-items: center;
+
                     img {
                         height: 4vw;
                         width: 4vw;
                     }
                     input[type=text] {
                         display: none;
-                        width: 100px;
-                        -webkit-transition: width 0.4s ease-in-out;
-                        transition: width 0.4s ease-in-out;
+                        height: 30px;
+                        width: 150px;
+                        margin-right: 10px;
+                        padding: 5px;
+                        border: none;
+                        border-radius: 3px;
                     }
                 }
 
@@ -264,9 +270,11 @@ main {
 
                 span {
                     line-height: 40px;
+                    font-size: 1.15vw;
                 }
 
                 button {
+                    font-size: 1.15vw;
                     line-height: 40px;
                     background: none;
                     border: none;
@@ -295,11 +303,12 @@ main {
                     padding-right: 120px;
 
                     h3 {
-                        font-weight: 400;                   
+                        font-weight: 400;   
+                        font-size: 1.7vw;                
                     }
 
                     p {
-                        font-size: 1.25em;
+                        font-size: 1.5vw;
                         font-weight: 900;
                     }
                 }
@@ -366,7 +375,7 @@ main {
 
             h3 {
                 font-weight: 100;
-                font-size: 1em;
+                font-size: 1.25vw;
                 width: 100%;
             }
             .products {
@@ -419,7 +428,7 @@ main {
 
                 h3 {
                     font-weight: 100;
-                    font-size: 1em;
+                    font-size: 1.25vw;
                     width: 100%;
                 }
 

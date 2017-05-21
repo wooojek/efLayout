@@ -78,6 +78,9 @@ document.addEventListener("DOMContentLoaded", function () {
     var onButton = document.getElementById("onButton");
     var offButton = document.getElementById("offButton");
     var chart = document.getElementsByClassName("chart")[0];
+    var searchBar = document.getElementsByClassName("searchBar")[0];
+    var searchBarImg = searchBar.childNodes[1];
+    var searchBarInput = searchBar.childNodes[3];
 
     onButton.addEventListener("click", function (event) {
         event.preventDefault();
@@ -95,7 +98,13 @@ document.addEventListener("DOMContentLoaded", function () {
         chart.style.display = "none";
     });
 
-    console.log(onButton, offButton, chart);
+    searchBarImg.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        searchBarInput.style.display === "inline-block" ? searchBarInput.style.display = "none" : searchBarInput.style.display = "inline-block";
+    });
+
+    console.log(searchBar, searchBarImg, searchBarInput);
 });
 
 /***/ })

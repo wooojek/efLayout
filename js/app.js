@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function (){
     const searchBar = document.getElementsByClassName("searchBar")[0];
     const searchBarImg = searchBar.childNodes[1];
     const searchBarInput = searchBar.childNodes[3];
+    const messagesNotification = document.querySelector(".profileFunctions").querySelector("img");
 
     onButton.addEventListener("click", function (event){
         event.preventDefault();
@@ -27,7 +28,13 @@ document.addEventListener("DOMContentLoaded", function (){
         event.preventDefault();
 
         searchBarInput.style.display === "inline-block" ? searchBarInput.style.display = "none" : searchBarInput.style.display = "inline-block";
-    })
+    });
 
-    console.log(searchBar, searchBarImg, searchBarInput);
+    let notification = document.createElement("span");
+    notification.innerHTML = "2";
+    notification.classList.add("notification");
+
+    messagesNotification.appendChild(notification);
+
+    console.log(messagesNotification);
 });

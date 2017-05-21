@@ -97,6 +97,13 @@ body {
     display: none;
 }
 
+.notification {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 20;
+}
+
 header {
     width: 100vw;
     height: 10vw;
@@ -211,6 +218,7 @@ header {
                     img {
                         height: 4vw;
                         width: 4vw;
+                        cursor: pointer;
                     }
                     input[type=text] {
                         display: none;
@@ -291,6 +299,7 @@ main {
                 button:hover {
                     color: black;
                     background-color: white;
+                    cursor: pointer;
                 }
             }
 
@@ -343,6 +352,8 @@ main {
                             width: 33px;
                             outline: none;
                             text-align: center;
+                            cursor: pointer;
+                            
                         }
 
                         .analysisOff {
@@ -510,6 +521,7 @@ main {
                         padding-bottom: 2px;
                         text-overflow: ellipsis;
                         white-space: nowrap;
+                        cursor: pointer;
                     }
                 }
 

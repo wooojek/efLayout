@@ -143,6 +143,13 @@ body {
   display: none;
 }
 
+.notification {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 20;
+}
+
 header {
   width: 100vw;
   height: 10vw;
@@ -265,6 +272,7 @@ header .container nav .searchLogout .searchBar {
 header .container nav .searchLogout .searchBar img {
   height: 4vw;
   width: 4vw;
+  cursor: pointer;
 }
 
 header .container nav .searchLogout .searchBar input[type=text] {
@@ -342,6 +350,7 @@ main .container .finance .addRecord button {
 main .container .finance .addRecord button:hover {
   color: black;
   background-color: white;
+  cursor: pointer;
 }
 
 main .container .finance .status {
@@ -396,6 +405,7 @@ main .container .finance .status .accountAnalysis div button {
   width: 33px;
   outline: none;
   text-align: center;
+  cursor: pointer;
 }
 
 main .container .finance .status .accountAnalysis div .analysisOff {
@@ -559,4 +569,5 @@ main .container .others .history > ul li:hover select {
   padding-bottom: 2px;
   text-overflow: ellipsis;
   white-space: nowrap;
+  cursor: pointer;
 }

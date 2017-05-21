@@ -2,10 +2,6 @@ $mainColor: #13bbd2;
 $secondColor: #d9dada; 
 $navBarBorders: #56d0df;
 
-.display {
-    display: none;
-}
-
 $column: 12;
 $site-width: 1200px;
 $min-site-width: 320px;
@@ -95,6 +91,10 @@ body {
 
 .uppercase {
     text-transform: uppercase;
+}
+
+.displayNone {
+    display: none;
 }
 
 header {
@@ -279,6 +279,11 @@ main {
                     margin-left: 15px;
                     outline: none;
                 }
+
+                button:hover {
+                    color: black;
+                    background-color: white;
+                }
             }
 
             .status {
@@ -328,15 +333,14 @@ main {
                             height: 24px;
                             width: 33px;
                             outline: none;
+                            text-align: center;
                         }
 
-                        button[name="analysisOff"] {
-                            background-color: white;
-                            text-align: center;
+                        .analysisOff {
+                            background-color: $secondColor;
                         }
-                        button[name="analysisOn"] {
+                        .analysisOn {
                             background-color: #01cc01;
-                            text-align: center;
                         }
                     }
                 }
@@ -394,13 +398,19 @@ main {
                         display: flex;
                         align-items: center;
                         flex-flow: wrap;
-                        padding-left: 5px; 
+                        padding-left: 5px;
+                        width: 50%; 
 
                         p {
                             width: 100%;
                             margin: 0;
                         }
                     }
+            }
+
+            .products > div:hover {
+                background-color: $mainColor;
+                color: white;
             }
 
             .history {
@@ -411,6 +421,29 @@ main {
                     font-weight: 100;
                     font-size: 1em;
                     width: 100%;
+                }
+
+                select {
+                    -webkit-appearance: button;
+                    -moz-appearance: button;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -webkit-padding-end: 20px;
+                    -moz-padding-end: 20px;
+                    -webkit-padding-start: 2px;
+                    -moz-padding-start: 2px;
+                    background-image: url(../images/ic_arrow_down.png);
+                    background-position: center right;
+                    background-repeat: no-repeat;
+                    border: none;
+                    outline: none;
+                    font-size: inherit;
+                    margin: 0;
+                    overflow: hidden;
+                    padding-top: 2px;
+                    padding-bottom: 2px;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
                 }
             }
 
@@ -439,6 +472,36 @@ main {
                     width: 100%;
                     height: 1px;
                     background-color: $secondColor;
+                }
+
+                li:hover {
+                    background-color: $mainColor;
+                    color: white;
+
+                    select {
+                        -webkit-appearance: button;
+                        -moz-appearance: button;
+                        -webkit-user-select: none;
+                        -moz-user-select: none;
+                        -webkit-padding-end: 20px;
+                        -moz-padding-end: 20px;
+                        -webkit-padding-start: 2px;
+                        -moz-padding-start: 2px;
+                        background-color: $mainColor;
+                        color: white;
+                        background-image: url(../images/ic_arrow_down_white.png);
+                        background-position: right;
+                        background-repeat: no-repeat;
+                        border: none;
+                        outline: none;
+                        font-size: inherit;
+                        margin: 0;
+                        overflow: hidden;
+                        padding-top: 2px;
+                        padding-bottom: 2px;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
                 }
 
             }
